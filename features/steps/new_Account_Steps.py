@@ -8,7 +8,7 @@ from features.pages.presta_shop import PrestaShopLogin
 def step_impl(context, navegador):
     context.prestashop = PrestaShopLogin(navegador=navegador)
     context.prestashop.abrir_pagina()
-    time.sleep(20)
+    time.sleep(15)
 
 # ----- ARRANGE -----
 @when("El usuario va a crear una cuenta")
@@ -36,6 +36,7 @@ def step_fill_registration_form(context):
 
     # Act: Completar el formulario
     context.prestashop.registro_usuario(datos_usuario)
+    time.sleep(10)
 
 
 # ----- ASSERT -----
