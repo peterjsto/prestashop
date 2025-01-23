@@ -104,7 +104,7 @@ class PrestaShopLogin:
     # ----- ASSERT -----
     def visualizar_inicio(self):
         assert self.esperar_elemento(XPATHS["products"]) is not None, \
-            "Página de inicio no está visible."
+            "Página de inicio no está visibl."
 
     def cerrar_sesion(self):
         self.driver.quit()
